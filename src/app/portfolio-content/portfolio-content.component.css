@@ -1,0 +1,28 @@
+.main-text{
+   padding-bottom:130px;
+   margin-bottom: 200px;
+}
+.main-text h2{
+   font-size:30px;
+   line-height:1;
+   text-align: center;
+}
+.main-text h2 span{
+   color: aqua;
+}
+.portfolio-content{
+   display:grid;
+   grid-template-columns:repeat(auto-fit, minmax(359px, auto))
+}
+.row{
+   overflow:hidden;
+   position:relative;
+   border-radius:8px;
+   cursor:pointer;
+}
+.row img{
+   width:100%;
+   border-radius: 8px;
+   display:block;
+   transition: transform 0.5s;
+}

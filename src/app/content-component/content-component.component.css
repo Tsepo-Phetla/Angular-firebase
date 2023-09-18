@@ -1,0 +1,158 @@
+.contact-content {
+   flex: 1;
+   padding-right: 20px;
+   justify-content:center;
+   align-items: center;
+   text-align:center;
+   padding: 20px;
+   margin-top: 60px;
+ }
+ /* contact-form.component.css */
+ 
+ .container {
+     max-width: 600px;
+     margin: 0 auto;
+     margin-right: 80px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     margin-bottom: 20px;
+     z-index: -1;
+   }
+   
+   h2 {
+     text-align: center;
+     margin-bottom: 20px;
+   }
+   
+   .form-group {
+     margin-bottom: 15px;
+     z-index: -1;
+   }
+   
+   label {
+     font-weight: bold;
+     cursor: pointer; /* Make labels clickable */
+   }
+   
+   /* Style icons in labels */
+   .form-group label i {
+     margin-right: 10px;
+   }
+   
+   input[type="text"],
+   input[type="email"],
+   input[type="tel"],
+   textarea {
+     width: 500px;
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     font-size: 16px;
+   }
+   
+   textarea {
+     resize: vertical;
+   }
+   
+   .btn-primary {
+     background-color: #00ffff;
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     padding: 10px 20px;
+     cursor: pointer;
+   }
+   
+   /* Style social media links */
+   .containerr {
+     transform: translate(-30%, -920%);
+   }
+   
+   .social-container {
+     text-align: center;
+   }
+   
+   .social-media {
+     text-align: center;
+   }
+   
+   .social-link {
+     text-decoration: none;
+     color: #00ffff;
+     font-size: 18px;
+     margin: 10px;
+   }
+   
+   .social-link i {
+     margin-right: 10px;
+   }
+   
+   .social-link:hover {
+     text-decoration: underline;
+   }
+   
+   /* Contact information */
+   .contact-info {
+     background-color: #f5f5f5;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     margin-left: 30px;
+     width: 80%;
+     transform: translateY(-225%);
+   }
+   
+   .contact-info h2 {
+     text-align: center;
+     margin-bottom: 20px;
+   }
+   
+   .contact-list {
+     list-style-type: none;
+     padding: 0;
+   }
+   
+   .contact-list li {
+     margin-bottom: 10px;
+   }
+   
+   .contact-list i {
+     margin-right: 10px;
+     color: #00ffff;
+   }
+   
+   /* Media Query for Smaller Screens */
+   @media only screen and (max-width: 600px)  {
+     .container {
+       max-width: 100%;
+       margin-right: 0;
+       margin-left: 0;
+       padding: 10px;
+     }
+   
+     input[type="text"],
+     input[type="email"],
+     input[type="tel"],
+     textarea {
+       width: 100%;
+       font-size: 14px;
+     }
+   
+     .btn-primary {
+       padding: 8px 16px;
+     }
+   
+     .social-link {
+       font-size: 16px;
+     }
+   
+     .contact-info {
+       width: 100%;
+       margin-left: 0;
+       transform: translateY(0);
+     }
+   }
+   
+ 

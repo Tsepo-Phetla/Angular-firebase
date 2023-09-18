@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+}
+.skills{
+    justify-content: center;
+    align-items: cente;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+}

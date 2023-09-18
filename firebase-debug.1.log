@@ -1,0 +1,35 @@
+[debug] [2023-08-30T09:21:16.996Z] ----------------------------------------------------------------------
+[debug] [2023-08-30T09:21:16.999Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\TSEPO PHETLA\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-08-30T09:21:17.000Z] CLI Version:   12.5.2
+[debug] [2023-08-30T09:21:17.000Z] Platform:      win32
+[debug] [2023-08-30T09:21:17.001Z] Node Version:  v18.16.0
+[debug] [2023-08-30T09:21:17.002Z] Time:          Wed Aug 30 2023 11:21:17 GMT+0200 (South Africa Standard Time)
+[debug] [2023-08-30T09:21:17.002Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-30T09:21:17.304Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-30T09:21:17.305Z] > authorizing via signed-in user (tsepophetla@gmail.com)
+[debug] [2023-08-30T09:21:17.305Z] [iam] checking project webportifolio-645ae for permissions ["firebase.projects.get"]
+[debug] [2023-08-30T09:21:17.309Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/webportifolio-645ae:testIamPermissions [none]
+[debug] [2023-08-30T09:21:17.309Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/webportifolio-645ae:testIamPermissions x-goog-quota-user=projects/webportifolio-645ae
+[debug] [2023-08-30T09:21:17.309Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/webportifolio-645ae:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-08-30T09:21:19.293Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/webportifolio-645ae:testIamPermissions 200
+[debug] [2023-08-30T09:21:19.294Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/webportifolio-645ae:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-08-30T09:21:19.298Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/webportifolio-645ae [none]
+[debug] [2023-08-30T09:21:20.124Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/webportifolio-645ae 200
+[debug] [2023-08-30T09:21:20.124Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/webportifolio-645ae {"projectId":"webportifolio-645ae","projectNumber":"1022168144238","displayName":"Webportifolio","name":"projects/webportifolio-645ae","resources":{"hostingSite":"webportifolio-645ae"},"state":"ACTIVE","etag":"1_252e528e-6898-4670-bbf8-4edfa5e026ac"}
+[info] 
+[info] === Serving from 'C:\Users\TSEPO PHETLA\Desktop\Final_Angular_Port\portfolio'...
+[info] 
+[debug] [2023-08-30T09:21:20.156Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/webportifolio-645ae/sites 
+[debug] [2023-08-30T09:21:22.396Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/webportifolio-645ae/sites 200
+[debug] [2023-08-30T09:21:22.397Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/webportifolio-645ae/sites {"sites":[{"name":"projects/webportifolio-645ae/sites/webportifolio-645ae","defaultUrl":"https://webportifolio-645ae.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-08-30T09:21:22.398Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/webportifolio-645ae/webApps/-/config [none]
+[debug] [2023-08-30T09:21:23.291Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/webportifolio-645ae/webApps/-/config 200
+[debug] [2023-08-30T09:21:23.292Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/webportifolio-645ae/webApps/-/config {"projectId":"webportifolio-645ae","storageBucket":"webportifolio-645ae.appspot.com","apiKey":"AIzaSyDj5w8q4ZzbPsvkOz5P0frNkIPj02DpPyo","authDomain":"webportifolio-645ae.firebaseapp.com","messagingSenderId":"1022168144238"}
+[debug] [2023-08-30T09:21:23.306Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/webportifolio-645ae [none]
+[debug] [2023-08-30T09:21:23.917Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/webportifolio-645ae 200
+[debug] [2023-08-30T09:21:23.918Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/webportifolio-645ae {"projectId":"webportifolio-645ae","projectNumber":"1022168144238","displayName":"Webportifolio","name":"projects/webportifolio-645ae","resources":{"hostingSite":"webportifolio-645ae"},"state":"ACTIVE","etag":"1_252e528e-6898-4670-bbf8-4edfa5e026ac"}
+[debug] [2023-08-30T09:21:23.923Z] Specified "public" directory "public" does not exist; Deploy to Hosting site "webportifolio-645ae" may fail or be empty.
+[info] i  hosting[webportifolio-645ae]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[webportifolio-645ae]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [30/Aug/2023:09:21:48 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Aug/2023:09:21:48 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}

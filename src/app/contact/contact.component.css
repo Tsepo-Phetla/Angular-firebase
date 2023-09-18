@@ -1,0 +1,119 @@
+body{
+    margin:0;
+    padding:0;
+  }
+  .contact{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    align-items:center;
+    gap:3rem;
+    padding-left:30px;
+    margin-top:130px;
+}
+.contact-text h2{
+font-size: 70px;
+line-height: 1;
+text-align:center;
+}
+.contact-text h2 span{
+    color: #0ff;
+}
+.contact-text h4{
+    margin:15px 0;
+    color:lightslategrey;
+    font-size:20px;
+    font-weight:600;
+}
+.contact-text p{
+    color:rgb(90, 100, 60);
+  font-size: 17px; 
+  line-height:20px; 
+  margin-bottom: 2rem;
+}
+.contact-list{
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+}
+.contact-list i{
+    display:inline-block;
+    color: #00ffff;
+    font-size: 20px;
+    font-weight:600;
+    transition: all .40s ease;
+}
+.contact-list i a:hover{
+    transform: scale(1.01) translateY(-5px);
+}
+.contact-icons i{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height:40px;
+    background:transparent;
+    border-radius: 50%;
+    font-size: 20px;
+    border:2px solid #00ffff;
+    color: #00ffff;
+    text-decoration: none;
+    margin:30px 30px 30px 0;
+  
+    animation:slideLeft 1s ease forwards;
+      animation-delay:calc(.2s * var(--i));
+}
+.contact-icons i:hover{
+    background:#0099cc;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.contact-form form{
+    position:relative;
+    box-shadow: 0 0 20px #00ffff;
+    width: 80%;
+}
+.contact-form form input,form textarea{
+    border: none;
+    outline:none;
+    width: 100%;
+    padding: 5px;
+    color:black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+}
+.contact-form textarea{
+    resize:none;
+    height:220px;
+}
+.contact-form .send{
+    background: #00ffff;
+}
+.contact-form .send:hover{
+    background-color: #0099cc;
+    color:#081b29;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact {
+      grid-template-columns: 2fr; /* Change to a single column layout for phones */
+      padding-left: 15px; /* Adjust padding for smaller screens */
+      margin-top: 80px;
+      margin-left: 30px; /* Adjust margin for smaller screens */
+    }
+  
+    .contact-text h2 {
+      font-size: 30px;
+      margin-right:30px;
+    }
+    .contact-form form{
+        width:89%;
+    }
+    .bx {
+        font-size: 24px;
+      }
+  }
+  
