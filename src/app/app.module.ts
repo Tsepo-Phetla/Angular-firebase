@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import { NgxCaptchaModule } from 'ngx-captcha';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
@@ -45,6 +45,7 @@ import { TypingAnimationComponent } from './typing-animation/typing-animation.co
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxCaptchaModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
