@@ -54,10 +54,12 @@
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
+  background-color: hsla(0, 0%, 50%, 0.5);
 }
 .layer p{
   color:black;
   font-size: 1.8;
+  background-color: hsla(0, 0%, 50%, 0.5);
 }
 .layer i{
   color:red;
