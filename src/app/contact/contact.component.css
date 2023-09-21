@@ -45,18 +45,15 @@ text-align:center;
 .contact-list i a:hover{
     transform: scale(1.01) translateY(-5px);
 }
-.contact-icons{
-    font-size: 20px; 
-}
 .contact-icons i{
     display: inline-block;
     justify-content: center;
     align-items: center;
     width: 40px;
     height:40px;
-    background:transparent;
+    background:#081b29;;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 32px;
     border:2px solid #00ffff;
     color: #00ffff;
     text-decoration: none;
@@ -115,8 +112,9 @@ text-align:center;
     .contact-form form{
         width:89%;
     }
-    .bx {
-        font-size: 24px;
+    .contact-icons a i {
+        font-size: 32px;
+        background:#081b29;
       }
   }
   
