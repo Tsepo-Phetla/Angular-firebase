@@ -1,89 +1,128 @@
 .main-text{
-    padding-top:80px;
+   padding-top:80px;
 
- }
- .main-text h2{
-    font-size:30px;
-    line-height:1;
-    text-align: center;
- }
- .main-text h2 span{
-    color: aqua;
-    margin-left: 20px;
- }
- .portfolio-content{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(359px, auto));
-    padding:30px;
+}
+.main-text h2{
+   font-size:30px;
+   line-height:1;
+   text-align: center;
+}
+.main-text h2 span{
+   color: aqua;
+   margin-left: 20px;
+}
+.portfolio-content{
+   display:grid;
+   grid-template-columns:repeat(auto-fit, minmax(359px, auto));
+   padding:30px;
 
- }
- .row{
-    overflow:hidden;
-    position:relative;
-    border-radius:8px;
-    cursor:pointer;
-    padding: 15px;
- }
- .row img{
-    width:100%;
-    border-radius:8px;
-    display:block;
-    transition: transform 0.5s;
-   
- }
+}
+.row{
+   overflow:hidden;
+   position:relative;
+   border-radius:8px;
+   cursor:pointer;
+   padding: 15px;
+}
+.row img{
+   width:100%;
+   border-radius:8px;
+   display:block;
+   transition: transform 0.5s;
+  
+}
 .layer{
-   width: 100%;
-   height:0;
-   background:linear-gradient(rgba(0,0,0,0.1),#0ef);
-   position: absolute;
-   border-radius: 8px;
-   left:0;
-   bottom: 0;
-   overflow: hidden;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   text-align:center;
-   padding: 0 40px;
-   transition: height 0.5s;
-   
+  width: 100%;
+  height:0;
+  background:linear-gradient(rgba(0,0,0,0.1),#0ef);
+  position: absolute;
+  border-radius: 8px;
+  left:0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  padding: 0 40px;
+  transition: height 0.5s;
+  
 }
 .layer h5{
-   color:black;
-   font-size: 20px;
-   font-weight: 600;
-   margin-bottom: 15px;
+  color:black;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 .layer p{
-   color:black;
-   font-size: 1.8;
+  color:black;
+  font-size: 1.8;
 }
 .layer i{
-   color:red;
-   margin-top: 20px;
-   background: #fff;
-   font-size:20px;
-   width:60px;
-   height:60px;
-   display:flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 50%;
+  color:red;
+  margin-top: 20px;
+  background: #fff;
+  font-size:20px;
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 .row:hover img{
 transform: scale(1.1);
 }
 .row:hover .layer{
-   height:100%;
-   
+  height:100%;
+  
 }
 
-@media only screen and (max-width: 600px)  {
-   /* Add your responsive styles here */
-   .main-text h2 {
-       font-size: 24px;
-   }
+/* iphone media query */
+@media only screen and (max-width: 375px) and (max-height: 667px){
+  .main-text h2 {
+     font-size: 24px;
+ }
+ .row{
+  position: relative;
+  display: flex;
 
-   /* Add more responsive styles as needed */
+ }
+ .row img{
+    width:90%;
+    display:block;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+position: relative;
+transform: translateX(80%);
+
+ }
+ .layer{
+    width:74%;
+ }
+}
+
+
+/*iphone 5 */
+@media only screen and (max-width: 375px) and (max-height: 667px) {  
+  /* Add your responsive styles here */
+  .main-text h2 {
+      font-size: 24px;
+  }
+  .row img{
+     width:100%;
+     display:block;
+     align-items: center;
+     justify-content: center;
+     transition: transform 0.5s;
+position: relative;
+padding-right: 100px;
+
+  }
+  .layer{
+     width:77%;
+  }
+  /* Add more responsive styles as needed */
 }

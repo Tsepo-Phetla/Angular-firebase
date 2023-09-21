@@ -1,23 +1,23 @@
 .scroll-button {
-    position: fixed;
-    bottom: 60px;
-    right: 10px;
-    background-color: #00ffff;
-    border-radius: 21%;
-    color: black;
-    border: 1px solid black;
-  }
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  background-color: #00ffff;
+  border-radius: 21%;
+  color: black;
+  border: 1px solid black;
+}
 
- .scroll-button i {
-    font-size: 15px;
+.scroll-button i {
+  font-size: 15px;
+}
+@media  screen and (max-width:999px) {
+  .scroll-button{
+     margin-left: 270px;
+     margin-top: 170px;
+     right: 20px;
+     border-radius: 21%;
+     bottom: 7px;
   }
-  @media  screen and (max-width:999px) {
-    .scroll-button{
-       margin-left: 270px;
-       margin-top: 170px;
-       right: 20px;
-       border-radius: 21%;
-       bottom: 7px;
-    }
-    
-  }
+  
+}

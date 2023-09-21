@@ -45,6 +45,9 @@ text-align:center;
 .contact-list i a:hover{
     transform: scale(1.01) translateY(-5px);
 }
+.contact-icons{
+    font-size: 20px; 
+}
 .contact-icons i{
     display: inline-block;
     justify-content: center;

@@ -1,23 +1,27 @@
-.experience{
-    justify-content: center;
-    align-items: cente;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    color: black;
-}
 
-@media only screen and (max-width: 600px)  {
+@media only screen and (max-width: 375px) and (max-height: 667px){
     .experience{
-       position: relative;
-       font-size: 1rem;
-       grid-template-columns: 2fr; 
-       justify-content: center;
-       align-items: center;
-       display: flex;
-       top: 200px;
-       flex-direction: column;
-    }
+        position: relative;
+        font-size: 1rem;
+        grid-template-columns: 2fr; 
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        top: 50px;
+        flex-direction: column;
+     }   
 }
 
-
+/* ipad */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .experience{
+        position: relative;
+        font-size: 1rem;
+        grid-template-columns: 2fr; 
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        top: 50px;
+        flex-direction: column;
+     }  
+}
