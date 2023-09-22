@@ -272,6 +272,7 @@ margin-top: 30px;
   }
 
   .home-sci {
+    align-items: center;
     text-align: center; 
     margin-top: 03px; 
   }
@@ -279,11 +280,14 @@ margin-top: 30px;
   .home-sci a {
     display: inline-flex;
     justify-content: center;
+    align-items: center; /* Vertically center the content */
     width: 15px;
     height: 15px;
     background: transparent;
     text-decoration: none;
-    margin: 10px; 
+    margin: 10px;
+    border: none; /* Remove the border */
+    padding: 0; 
   }
   .image-container {
     width: 110px; 

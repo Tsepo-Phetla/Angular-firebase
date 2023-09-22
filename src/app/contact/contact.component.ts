@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import * as emailjs from 'emailjs-com';
 import { EmailJSResponseStatus } from 'emailjs-com';
 import { Title } from '@angular/platform-browser';
-import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
-import { ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgForm } from '@angular/forms';
-
-
+import Swal from 'sweetalert2';
+import { ReCaptcha2Component } from 'ngx-recaptcha2';
 
 @Component({
   selector: 'app-contact',
@@ -14,8 +13,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
-  @ViewChild('contactForm', { static: false }) contactForm: NgForm ; 
+  @ViewChild('contactForm', { static: false }) contactForm: NgForm;
+  @ViewChild(ReCaptcha2Component, { static: false }) captchaElem: ReCaptcha2Component; // Add this line
 
   userData = {
     user_name: '',
@@ -26,35 +25,48 @@ export class ContactComponent implements OnInit {
 
   protected aFormGroup: FormGroup;
 
-  constructor(private titleService: Title, private formBuilder: FormBuilder){
-    this.contactForm = {} as NgForm;
+  constructor(private titleService: Title, private formBuilder: FormBuilder) {
     this.titleService.setTitle('Tsepo Phetla - Contact');
     this.aFormGroup = this.formBuilder.group({
       // Define your form controls and their initial values here
     });
   }
-  ngOnInit(){
+
+  ngOnInit() {
     this.aFormGroup = this.formBuilder.group({
       recaptcha: ['', Validators.required]
     });
   }
-  siteKey:string = "6LdlaEQoAAAAAMsCnrIDdhOe-Qhh11CosfYx8nBP";
 
-  
+  siteKey: string = "6LdlaEQoAAAAAMsCnrIDdhOe-Qhh11CosfYx8nBP";
 
   public sendEmail(e: Event) {
     e.preventDefault();
-    emailjs.sendForm('service_45rahm9', 'template_4m57urn', e.target as HTMLFormElement, 'd7LyN4AYEABUv-poy')
-      .then((result: EmailJSResponseStatus) => {
 
+    if (this.captchaElem.getResponse() === '') {
+      Swal.fire('Error', 'Please complete the reCAPTCHA verification.', 'error');
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        'service_45rahm9',
+        'template_4m57urn',
+        e.target as HTMLFormElement,
+        'd7LyN4AYEABUv-poy'
+      )
+      .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
-      }, (error) => {
+        Swal.fire('Success', 'Your message has been sent successfully!', 'success');
+      })
+      .catch((error) => {
         console.log(error.text);
+        Swal.fire('Error', 'There was an error sending your message. Please try again later.', 'error');
       });
-      setTimeout(() => {
-        console.log('Form submitted:', this.userData);
-        this.resetForm();
-      }, 1000);
+    setTimeout(() => {
+      console.log('Form submitted:', this.userData);
+      this.resetForm();
+    }, 1000);
   }
 
   private resetForm() {
@@ -67,4 +79,3 @@ export class ContactComponent implements OnInit {
     this.contactForm.resetForm(); // Reset the form and its controls
   }
 }
-
