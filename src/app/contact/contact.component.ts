@@ -5,7 +5,6 @@ import { Title } from '@angular/platform-browser';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
-import { ReCaptcha2Component } from 'ngx-recaptcha2';
 
 @Component({
   selector: 'app-contact',
@@ -14,7 +13,6 @@ import { ReCaptcha2Component } from 'ngx-recaptcha2';
 })
 export class ContactComponent implements OnInit {
   @ViewChild('contactForm', { static: false }) contactForm: NgForm;
-  @ViewChild(ReCaptcha2Component, { static: false }) captchaElem: ReCaptcha2Component; // Add this line
 
   userData = {
     user_name: '',
@@ -25,7 +23,7 @@ export class ContactComponent implements OnInit {
 
   protected aFormGroup: FormGroup;
 
-  constructor(private titleService: Title, private formBuilder: FormBuilder) {
+  constructor(private titleService: Title,  private formBuilder: FormBuilder) {
     this.titleService.setTitle('Tsepo Phetla - Contact');
     this.aFormGroup = this.formBuilder.group({
       // Define your form controls and their initial values here
