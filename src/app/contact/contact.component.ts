@@ -6,14 +6,18 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
 
+
+declare var grecaptcha: any;
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  @ViewChild('contactForm', { static: false }) contactForm: NgForm;
-
+ 
+  @ViewChild('contactForm', { static: false }) contactForm!: NgForm; // Initialize contactForm using the '!' operator
+  
   userData = {
     user_name: '',
     user_email: '',
@@ -21,19 +25,18 @@ export class ContactComponent implements OnInit {
     message: ''
   };
 
-  protected aFormGroup: FormGroup;
+  protected aFormGroup: FormGroup = new FormGroup({});
+  captchaElem: any; 
 
-  constructor(private titleService: Title,  private formBuilder: FormBuilder) {
+  constructor(private titleService: Title, private formBuilder: FormBuilder) {
     this.titleService.setTitle('Tsepo Phetla - Contact');
-    this.aFormGroup = this.formBuilder.group({
-      // Define your form controls and their initial values here
-    });
   }
 
   ngOnInit() {
     this.aFormGroup = this.formBuilder.group({
       recaptcha: ['', Validators.required]
     });
+    this.captchaElem = grecaptcha;
   }
 
   siteKey: string = "6LdlaEQoAAAAAMsCnrIDdhOe-Qhh11CosfYx8nBP";
@@ -41,6 +44,8 @@ export class ContactComponent implements OnInit {
   public sendEmail(e: Event) {
     e.preventDefault();
 
+    // Ensure you have a reference to the reCAPTCHA element
+    // Assuming you have a variable named captchaElem for this purpose.
     if (this.captchaElem.getResponse() === '') {
       Swal.fire('Error', 'Please complete the reCAPTCHA verification.', 'error');
       return;
